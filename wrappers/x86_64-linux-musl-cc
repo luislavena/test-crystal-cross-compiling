@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+SDK_PATH=/opt/magic-haversack/x86_64-linux-musl
+
+exec zig cc -target x86_64-linux-musl -L${SDK_PATH}/lib "$@"

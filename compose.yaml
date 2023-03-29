@@ -1,0 +1,15 @@
+---
+services:
+  app:
+    build: .
+    command: overmind start -f Procfile.dev
+    working_dir: /code
+
+    # Set these env variables using `export FIXUID=$(id -u) FIXGID=$(id -g)`
+    user: ${FIXUID:-1000}:${FIXGID:-1000}
+
+    ports:
+      - "8080:8080"
+
+    volumes:
+      - .:/code:cached

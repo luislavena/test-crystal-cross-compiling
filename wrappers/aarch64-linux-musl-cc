@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+SDK_PATH=/opt/magic-haversack/aarch64-linux-musl
+
+exec zig cc -target aarch64-linux-musl -L${SDK_PATH}/lib "$@"

@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+SDK_PATH=/opt/magic-haversack/aarch64-apple-darwin20.0
+MACOS_SDK=/opt/magic-haversack/MacOSX11.sdk
+
+exec zig cc -target aarch64-macos.11-none -L${SDK_PATH}/lib -L${MACOS_SDK}/usr/lib "$@"
